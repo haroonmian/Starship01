@@ -1,5 +1,5 @@
 import "./App.css";
-import Wsapi from "./Component/Wsapi/Wsapi";
+import Wsapi from "./Component/Wsapi";
 
 function App() {
   return (

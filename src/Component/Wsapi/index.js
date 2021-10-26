@@ -19,17 +19,17 @@ const Wsapi = () => {
   }, []);
 
   const selectHandler = (e) => {
+    let value = [];
     if (e.target.value == "none") {
-      const allItems = starships;
-      setLists(allItems);
-      console.log("abc");
+      value = starships;
     } else {
-      const newList = starships.filter(
+      value = starships.filter(
         (list) => list.manufacturer === e.target.value
       );
-      setLists(newList);
     }
+    setLists(value);
   };
+  
   return (
     <div className="container mt-5">
       <div className="row d-flex justify-content-center">
@@ -58,10 +58,10 @@ const Wsapi = () => {
           <table className="table table-bordered mt-5">
             <thead>
               <tr>
-                <th scope="col">name</th>
-                <th scope="col">model</th>
-                <th scope="col">manufacturer</th>
-                <th scope="col"> cost_in_credits</th>{" "}
+                <th scope="col">Name</th>
+                <th scope="col">Model</th>
+                <th scope="col">Manufacturer</th>
+                <th scope="col">Cost In Credits</th>{" "}
               </tr>
             </thead>
             <tbody>
